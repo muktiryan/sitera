@@ -1,0 +1,88 @@
+<div class="row">
+    <div class="col-xl-3">
+        <kt-portlet [class]="'kt-portlet--height-fluid-half kt-portlet--border-bottom-brand'">
+            <kt-portlet-body [class]="'kt-portlet__body--fluid'">
+                <kt-widget26 [value]="570" [desc]="'Grafik pencairan dana setiap bulan'" [options]="chartOptions1">
+                </kt-widget26>
+            </kt-portlet-body>
+        </kt-portlet>
+        <div class="kt-space-20"></div>
+        <kt-portlet [class]="'kt-portlet--height-fluid-half kt-portlet--border-bottom-brand'">
+            <kt-portlet-body [class]="'kt-portlet__body--fluid'">
+                <kt-widget26 [value]="640" [desc]="'Grafik pencairan dana setiap bulan'" [options]="chartOptions2">
+                </kt-widget26>
+            </kt-portlet-body>
+        </kt-portlet>
+    </div>
+    <div class="col-xl-9">
+        <kt-portlet [class]="'kt-portlet--height-fluid'">
+            <kt-portlet-body [class]="'kt-portlet__body--fit'">
+                <kt-widget14 [title1]="'Pemanfaatan'" [title2]="'Redemption'"
+                    [desc]="'Chart perbandingan pemanfaatan & redemption'"></kt-widget14>
+            </kt-portlet-body>
+        </kt-portlet>
+    </div>
+</div>
+
+<kt-portlet [class]="'kt-portlet--height-fluid'">
+    <kt-portlet-body [class]="'kt-portlet__body--fit'">
+        <!-- See off.documentations 'https://material.angular.io/components/table/overview' -->
+        <div perfectScrollbar [ngStyle]="{'max-height': '43vh', 'position': 'relative'}"
+            class="mat-table__wrapper mat-table__wrapper--dashboard mb-4">
+            <!-- Checkbox Column -->
+            <div class="example-header">
+                <mat-form-field>
+                    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+                </mat-form-field>
+            </div>
+            <!-- Table with selection -->
+            <!-- https://run.stackblitz.com/api/angular/v1?file=app%2Ftable-selection-example.ts -->
+            <table mat-table class="lmat-elevation-z8" [dataSource]="dataSource" matSort matSortActive="id"
+                matSortDirection="asc" matSortDisableClear>
+                <ng-container matColumnDef="id">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>#</th>
+                    <!-- <td mat-cell *matCellDef="let product" class="mat-column-vinCode">{{product.id}}</td> -->
+                    <td mat-cell *matCellDef="let product" class="mat-column-vinCode">{{product.id}}</td>
+                </ng-container>
+
+                <ng-container matColumnDef="pegawai">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>Pegawai</th>
+                    <td mat-cell *matCellDef="let product">{{product.pegawai}}</td>
+                </ng-container>
+
+                <ng-container matColumnDef="dana">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>Nilai Kepesertaan</th>
+                    <td mat-cell *matCellDef="let product">{{product.dana}}</td>
+                </ng-container>
+
+                <ng-container matColumnDef="kup">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>KUP</th>
+                    <td mat-cell *matCellDef="let product">{{product.kup}}</td>
+                </ng-container>
+
+                <ng-container matColumnDef="nav">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>NAV</th>
+                    <td mat-cell *matCellDef="let product">{{product.nav}}</td>
+                </ng-container>
+
+                <ng-container matColumnDef="total">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>Nilai Pengembangan</th>
+                    <td mat-cell *matCellDef="let product">{{product.total}}</td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+            </table>
+
+            <div class="mat-table__message" *ngIf="!dataSource.hasItems">No records found</div>
+        </div>
+        <!-- start: BOTTOM -->
+        <div class="mat-table__bottom mat-table__bottom--padding">
+            <mat-spinner [diameter]="20" *ngIf="dataSource.loading$ | async"></mat-spinner>
+            <mat-paginator [pageSize]="6" [pageSizeOptions]="[3, 6, 15]" [length]="dataSource.paginatorTotal$ | async"
+                [showFirstLastButtons]="true"></mat-paginator>
+        </div>
+        <!-- end: BOTTOM -->
+
+    </kt-portlet-body>
+</kt-portlet>

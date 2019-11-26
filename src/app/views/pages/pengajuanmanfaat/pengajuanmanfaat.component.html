@@ -1,0 +1,56 @@
+<div class="content  content-fixed">
+    <div class="container">
+      <h4 id="section3" class="mg-b-10">Pengajuan Manfaat</h4>
+      <hr class="mg-y-10">
+      
+      <div class="row row-xs" *ngIf = "!isChoose">
+        <h6>Pilih Bank Pengajuan</h6>
+        <div class="col-12">
+          <div data-label="Preview" class="df-example">
+            <div class="row row-sm">
+              <div class="col-md" style="text-align: center;padding-top:30px;" onmouseover="this.style.cursor='pointer'" >
+                <a routerLink="" (click)="chooseBank(1)">
+                  <figure class="img-caption pos-relative mg-b-0">
+                    <img src="../../../../assets/phincon/mandiri.png" class="img-fit-cover" style="width: 150px;height:auto;"
+                      alt="Responsive image">
+                  </figure>
+                </a>
+              </div><!-- col -->
+              <div class="col-md" style="text-align: center;padding-top:30px;" onmouseover="this.style.cursor='pointer'">
+                <a routerLink=""  (click)="chooseBank(2)">
+                  <figure class="img-caption pos-relative mg-b-0">
+                    <img src="../../../../assets/phincon/BNI.png" class="img-fit-cover" style="width: 150px;height:auto;"
+                      alt="Responsive image">
+                  </figure>
+                </a>
+              </div><!-- col -->
+              <div class="col-md" style="text-align: center;padding-top:30px;" onmouseover="this.style.cursor='pointer'">
+                <a routerLink=""  (click)="chooseBank(3)">
+                  <figure class="img-caption pos-relative mg-b-0">
+                    <img src="../../../../assets/phincon/BTN.png" class="img-fit-cover" style="width: 150px;height:auto;"
+                      alt="Responsive image">
+                  </figure>
+                </a>
+              </div>
+              <div class="col-md" style="text-align: center;padding-top:30px;" onmouseover="this.style.cursor='pointer'">
+                <a routerLink=""  (click)="chooseBank(4)">
+                  <figure class="img-caption pos-relative mg-b-0">
+                    <img src="../../../../assets/phincon/BRI.png" class="img-fit-cover" style="width: 150px;height:auto;"
+                      alt="Responsive image">
+                  </figure>
+                </a>
+              </div>
+            </div><!-- row -->
+          </div>
+        </div><!-- col -->
+      </div>
+      <div *ngIf = "isChoose">
+          <h6>Form Pengajuan Manfaat</h6>
+          <div class="row row-xs" style="padding-top:20px;padding-left:15px;padding-right:15px;">
+            <p>Isi Form</p>
+          </div>
+
+      </div>
+    </div><!-- container -->
+  
+  </div>
