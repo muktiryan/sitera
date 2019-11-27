@@ -1,1 +1,80 @@
-<p>simulasi works!</p>
+<div class="content  content-fixed">
+        <div class="container">
+          <h4 id="section3" class="mg-b-10">Kalkulator Limit</h4>
+          <hr class="mg-y-10">
+          <div class="row row-xs">
+            <div class="col-12">
+                <mat-card class="example-card">
+                    <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+                    <mat-card-content>
+                            <form class="example-form">
+                                    <mat-form-field class="example-full-width">
+                                      <input matInput placeholder="Input Formdibawah ini" disabled>
+                                    </mat-form-field>
+                                    <table class="example-full-width" cellspacing="0">
+                                    <tr>
+                                      <td><mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Income THP Debitur" style="text-align: end;">
+                                      </mat-form-field></td>
+                                      <td>&nbsp;</td>
+                                      <td><mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Usia Cadeb" style="text-align: end;">
+                                      </mat-form-field></td>
+                                    </tr>
+                                    <tr>
+                                        <td><mat-form-field class="example-full-width">
+                                            <input matInput placeholder="Income THP Spouse (Bila ada)" style="text-align: end;" value=0>
+                                        </mat-form-field></td>
+                                        <td>&nbsp;</td>
+                                        <td><mat-form-field class="example-full-width">
+                                            <input matInput placeholder="Usia Pension" style="text-align: end;" value=56>
+                                        </mat-form-field></td>
+                                    </tr>
+                                     <tr>
+                                        <td><mat-form-field class="example-full-width">
+                                            <input matInput placeholder="Total Kewajiban Pihak ke-3 Debitur" style="text-align: end;" value=0>
+                                        </mat-form-field></td>
+                                        <td>&nbsp;</td>
+                                        <td><mat-form-field class="example-full-width">
+                                                <mat-select placeholder="Tenor Pengajuan">
+                                                        <mat-option *ngFor="let food of tenors" [value]="food.value">
+                                                          {{ food.viewValue }}
+                                                        </mat-option>
+                                                      </mat-select>
+                                        </mat-form-field></td>
+                                    </tr>
+                                    <tr>
+                                            <td><mat-form-field class="example-full-width">
+                                                <input matInput placeholder="Total Kewajiban Pihak ke-3 Spouse (Apabila Ada)" style="text-align: end;" value=0>
+                                            </mat-form-field></td>
+                                            <td>&nbsp;</td>
+                                            <td><mat-form-field class="example-full-width">
+                                                    <mat-select placeholder="Jenis Agunan">
+                                                            <mat-option *ngFor="let rumah of rumahs" [value]="rumah.value">
+                                                              {{ rumah.viewValue }}
+                                                            </mat-option>
+                                                          </mat-select>
+                                            </mat-form-field></td>
+                                        </tr>
+                                        <tr>
+                                                <td><mat-form-field class="example-full-width">
+                                                    <input matInput placeholder="DBR" style="text-align: end;" value=0>
+                                                </mat-form-field></td>
+                                                <td>&nbsp;</td>
+                                                <td><mat-form-field class="example-full-width">
+                                                        <input matInput placeholder="Jatuh Tempo Sertfikat (yyyy/MM/dd)" style="text-align: end;" value="2019-11-30">
+                                                </mat-form-field></td>
+                                            </tr>
+                                    </table>
+                                    
+                                  </form>
+                    </mat-card-content>
+                    <mat-card-actions>
+                      <button mat-button>CALCULATE</button>
+                    </mat-card-actions>
+                  </mat-card>
+            </div><!-- col -->
+          </div>
+        </div><!-- container -->
+      
+      </div>

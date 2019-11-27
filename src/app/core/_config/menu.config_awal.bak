@@ -17,11 +17,24 @@ export class MenuConfig {
 					page: '/kepesertaan',
 				},
 				{
+					title: 'Informasi',
+					root: true,
+					alignment: 'left',
+					page: '/informasi'
+				},
+				{
 					title: 'Dashboard & Report',
 					root: true,
 					alignment: 'left',
 					toggle: 'click',
 					page: '/dashboardandreport'
+				},
+				{
+					title: 'FAQ',
+					root: true,
+					alignment: 'left',
+					toggle: 'click',
+					page: '/faq'
 				},
 			]
 		},
@@ -29,35 +42,54 @@ export class MenuConfig {
 			self: {},
 			items: [
 				{
-					title: 'Beranda',
+					title: 'Home',
 					root: true,
 					alignment: 'left',
 					page: '/home',
 				},
 				{
-					title: 'Profile',
-					root: true,
-					alignment: 'left',
-					toggle: 'click',
-					page: '/profile'
-				},
-				{
-					title: 'Pengajuan',
+					title: 'Program',
 					root: true,
 					alignment: 'left',
 					toggle: 'click',
 					submenu: [
 						{
-							title: 'Kalkulator Limit & Informasi terkait KPR',
+							title: 'Pengembangan',
 							bullet: 'dot',
 							icon: 'flaticon-web',
-							page: '/kalkulator'
+							page: '/pengembangan'
 						},
 						{
-							title: 'Form Pengajuan KPR',
+							title: 'Pemanfaatan',
 							bullet: 'dot',
 							icon: 'flaticon-web',
 							page: '/pemanfaatan'
+						},
+						{
+							title: 'Pengajuan',
+							bullet: 'dot',
+							icon: 'flaticon-web',
+							page: '/pengajuan'
+						},
+					]
+				},
+				{
+					title: 'Info',
+					root: true,
+					alignment: 'left',
+					toggle: 'click',
+					submenu: [
+						{
+							title: 'Informasi',
+							bullet: 'dot',
+							icon: 'flaticon-web',
+							page: '/informasi'
+						},
+						{
+							title: 'Simulasi',
+							bullet: 'dot',
+							icon: 'flaticon-web',
+							page: '/simulasi'
 						},
 					]
 				},
@@ -81,19 +113,37 @@ export class MenuConfig {
 			self: {},
 			items: [
 				{
-					title: 'Beranda',
+					title: 'Home',
 					root: true,
 					alignment: 'left',
 					page: '/home',
 				},
 				{
-					title: 'Pengerahan',
+					title: 'Kepesertaan',
 					root: true,
 					alignment: 'left',
 					page: '/bpkepesertaan',
 				},
 				{
-					title: 'Pengelolaan',
+					title: 'Pengajuan',
+					root: true,
+					alignment: 'left',
+					page: '/bppengajuan',
+				},
+				{
+					title: 'Informasi',
+					root: true,
+					alignment: 'left',
+					page: '/informasi',
+				},
+				{
+					title: 'Dashboard & Report',
+					root: true,
+					alignment: 'left',
+					page: '/dashboardandreport',
+				},
+				{
+					title: 'Instruksi',
 					root: true,
 					alignment: 'left',
 					toggle: 'click',
@@ -105,24 +155,18 @@ export class MenuConfig {
 							page: '/informasi'
 						},
 						{
-							title: 'Pemupukan',
+							title: 'Redemption',
 							bullet: 'dot',
 							icon: 'flaticon-web',
 							page: '/simulasi'
 						},
 						{
-							title: 'Pencadangan',
+							title: 'Investasi',
 							bullet: 'dot',
 							icon: 'flaticon-web',
 							page: '/informasi'
 						},
 					]
-				},
-				{
-					title: 'Dashboard & Report',
-					root: true,
-					alignment: 'left',
-					page: '/dashboardandreport',
 				},
 			]
 		},
@@ -131,30 +175,44 @@ export class MenuConfig {
 			items: [
 				{ section: 'Halaman' },
 				{
-					title: 'Beranda',
+					title: 'Home',
 					root: true,
 					icon: 'flaticon2-architecture-and-city',
 					page: '/home',
 				},
 				{
-					title: 'Profile',
-					icon: 'flaticon2-list-2',
-					root: true,
-					page: '/dashboardandreport'
-				},
-				{
-					title: 'Pengajuan',
+					title: 'Program',
 					root: true,
 					bullet: 'dot',
 					icon: 'flaticon2-browser-2',
 					submenu: [
 						{
-							title: 'Kalkulator Limit & Informasi terkait KPR',
+							title: 'Pengembangan',
 							page: '/pengembangan'
 						},
 						{
-							title: 'Form Pengajuan KPR',
+							title: 'Pemanfaatan',
 							page: '/pemanfaatan'
+						},
+						{
+							title: 'Pengajuan',
+							page: '/pengajuan'
+						},
+					]
+				},
+				{
+					title: 'Info',
+					root: true,
+					bullet: 'dot',
+					icon: 'flaticon2-user-outline-symbol',
+					submenu: [
+						{
+							title: 'Informasi',
+							page: '/informasi'
+						},
+						{
+							title: 'Simulasi',
+							page: '/simulasi'
 						},
 					]
 				},
@@ -189,17 +247,29 @@ export class MenuConfig {
 					page: '/kepesertaan',
 				},
 				{
+					title: 'Informasi',
+					root: true,
+					icon: 'flaticon2-user-outline-symbol',
+					page: '/informasi'
+				},
+				{
 					title: 'Dashboard & Report',
 					icon: 'flaticon2-list-2',
 					root: true,
 					page: '/dashboardandreport'
+				},
+				{
+					title: 'FAQ',
+					root: true,
+					icon: 'flaticon2-list-2',
+					page: '/faq'
 				},
 			]
 		},
 		asideBptappera: {
 			self: {},
 			items: [
-				{ section: 'Beranda' },
+				{ section: 'Halaman' },
 				{
 					title: 'Home',
 					root: true,
@@ -207,13 +277,31 @@ export class MenuConfig {
 					page: '/home',
 				},
 				{
-					title: 'Pengerahan',
+					title: 'Kepesertaan',
 					icon: 'flaticon2-list-2',
 					root: true,
 					page: '/pengajuan',
 				},
 				{
-					title: 'Pengelolaan',
+					title: 'Pengajuan',
+					icon: 'flaticon2-list-2',
+					root: true,
+					page: '/pengajuan',
+				},
+				{
+					title: 'Informasi',
+					icon: 'flaticon2-list-2',
+					root: true,
+					page: '/info',
+				},
+				{
+					title: 'Dashboard & Report',
+					icon: 'flaticon2-list-2',
+					root: true,
+					page: '/dashboardandreport'
+				},
+				{
+					title: 'Instruksi',
 					root: true,
 					bullet: 'dot',
 					icon: 'flaticon2-browser-2',
@@ -223,20 +311,14 @@ export class MenuConfig {
 							page: '/pengembangan'
 						},
 						{
-							title: 'Pemupukan',
+							title: 'Redemption',
 							page: '/pemanfaatan'
 						},
 						{
-							title: 'Pencadangan',
+							title: 'Investasi',
 							page: '/pengajuan'
 						},
 					]
-				},
-				{
-					title: 'Dashboard & Report',
-					icon: 'flaticon2-list-2',
-					root: true,
-					page: '/dashboardandreport'
 				},
 			]
 		},

@@ -28,8 +28,12 @@ export class DashboardreportComponent implements OnInit {
   @Input() data: Widget1Data[];
   // Public properties
   dataSource: DataTableDataSource;
+  dataSource2: any;
+  dataSource3: any;
   // displayedColumns = ['id', 'cManufacture', 'cModel', 'cMileage' ];
   displayedColumns = ['id', 'pegawai', 'dana', 'kup', 'nav', 'total'];
+  displayedColumns2 = ['bulan', 'nilai', 'kup', 'nav','nilaik', 'tglsetor', 'jmlsetor'];
+  displayedColumns3 = ['nik', 'name', 'nak', 'tnilai','kup', 'nav', 'npsi'];
   // chartoption
   chartOptions1: SparklineChartOptions;
   chartOptions2: SparklineChartOptions;
@@ -103,6 +107,107 @@ export class DashboardreportComponent implements OnInit {
 
     // Init DataSource
     this.dataSource = new DataTableDataSource(this.dataTableService);
+
+    this.dataSource2 = [
+      {
+        "bulan": "Januari",
+        "nilai": 100000,
+	    "kup": 100,
+	    "nav": 1000,
+	    "nilaik": 101000,
+	    "tsetor": "2020-02-01",
+	    "jmlsetor": 100000,
+      },
+	  {
+        "bulan": "February",
+        "nilai": 200000,
+	    "kup": 200,
+	    "nav": 1010,
+	    "nilaik": 202000,
+	    "tsetor": "2020-02-02",
+	    "jmlsetor": 100000,
+      },
+	  {
+        "bulan": "Maret",
+        "nilai": 300000,
+	    "kup": 300,
+	    "nav": 1020,
+	    "nilaik": 302000,
+	    "tsetor": "2020-03-12",
+	    "jmlsetor": 100000,
+      },
+	  {
+        "bulan": "April",
+        "nilai": 400000,
+	    "kup": 400,
+	    "nav": 1030,
+	    "nilaik": 402000,
+	    "tsetor": "2020-03-02",
+	    "jmlsetor": 100000,
+      },
+	  {
+        "bulan": "Mei",
+        "nilai": 500000,
+	    "kup": 500,
+	    "nav": 1040,
+	    "nilaik": 502000,
+	    "tsetor": "2020-04-02",
+	    "jmlsetor": 100000,
+      },
+      
+    ];
+    this.dataSource3 = [
+      {
+        "nopes": "00109201082",
+        "nama": "Justin Russo",
+	    "nak": 150000,
+		"tnk": 1500000,
+		"kup": 150,
+	    "nav": 1010,
+	    "nilaik": 1650000,
+      },
+	  {
+        "nopes": "20382938203",
+        "nama": "Isabella Desmon",
+	    "nak": 200000,
+		"tnk": 2000000,
+		"kup": 150,
+	    "nav": 1010,
+	    "nilaik": 2200000,
+      },
+	  {
+        "nopes": "02039019312",
+        "nama": "Aisyah Fatma",
+	    "nak": 120000,
+		"tnk": 1200000,
+		"kup": 120,
+	    "nav": 1010,
+	    "nilaik": 1320000,
+      },
+	  {
+        "nopes": "00309403943",
+        "nama": "Rafael Wendy",
+	    "nak": 300000,
+		"tnk": 3000000,
+		"kup": 300,
+	    "nav": 1010,
+	    "nilaik": 3300000,
+      },
+	  {
+        "nopes": "00293029302",
+        "nama": "Thomas Siahaan",
+	    "nak": 400000,
+		"tnk": 4000000,
+		"kup": 400,
+	    "nav": 1010,
+	    "nilaik": 4400000,
+      },
+	  
+      
+    ];
+
+
+
     // First load
     this.loadItems(true);
   }

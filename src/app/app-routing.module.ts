@@ -41,7 +41,11 @@ const routes: Routes = [
 				loadChildren: () => import('../app/views/pages/bppengajuan/bppengajuan.module').then(m => m.BppengajuanModule)
 			},
 			{
-				path: 'pengajuan',
+				path: 'bpkepesertaan',
+				loadChildren: () => import('../app/views/pages/bpkepesertaan/bpkepesertaan.module').then(m => m.BpkepesertaanModule)
+			},
+			{
+				path: 'profile',
 				loadChildren: () => import('../app/views/pages/pengajuan/pengajuan.module').then(m => m.PengajuanModule)
 			},
 			{
@@ -57,7 +61,7 @@ const routes: Routes = [
 				loadChildren: () => import('../app/views/pages/informasi/informasi.module').then(m => m.InformasiModule)
 			},
 			{
-				path: 'simulasi',
+				path: 'kalkulator',
 				loadChildren: () => import('../app/views/pages/simulasi/simulasi.module').then(m => m.SimulasiModule)
 			},
 			{

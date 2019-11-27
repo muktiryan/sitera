@@ -10,10 +10,11 @@ import { CoreModule } from '../../core/core.module';
 import { PengajuanmanfaatComponent } from './pengajuanmanfaat/pengajuanmanfaat.component';
 import { PengajuanredemptionComponent } from './pengajuanredemption/pengajuanredemption.component';
 import { BppengajuanComponent } from './bppengajuan/bppengajuan.component';
+import { BpkepesertaanComponent } from './bpkepesertaan/bpkepesertaan.component';
 
 
 @NgModule({
-	declarations: [PengajuanmanfaatComponent, PengajuanredemptionComponent, BppengajuanComponent],
+	declarations: [PengajuanmanfaatComponent, PengajuanredemptionComponent, BppengajuanComponent, BpkepesertaanComponent],
 	exports: [],
 	imports: [
 		CommonModule,
