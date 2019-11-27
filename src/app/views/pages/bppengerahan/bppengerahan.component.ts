@@ -24,6 +24,10 @@ export class BppengerahanComponent implements OnInit {
 
     @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
     @ViewChild(MatSort, {static: true}) sort: MatSort;
+    @ViewChild('lineChart', {static: true}) private chartRef;
+    linechart: any;
+    @ViewChild('pieChart', {static: true}) private pieChartRef;
+    piechart: any;
 
     selection = new SelectionModel<DataTableItemModel>(true, []);
 
@@ -101,6 +105,7 @@ export class BppengerahanComponent implements OnInit {
 
         this.loadItems(true);
 
+        this.loadChart();
     }
 
     loadItems(firstLoad: boolean = false) {
@@ -113,5 +118,112 @@ export class BppengerahanComponent implements OnInit {
         );
         this.dataSource.loadItems(queryParams);
         this.selection.clear();
+    }
+
+    loadChart() {
+        this.linechart = new Chart(this.chartRef.nativeElement, {
+            type: 'line',
+            data: {
+                labels: ['Januari', 'Februari', 'Maret', 'April', 'Mei'],
+                datasets: [
+                    {
+                        // label: 'Jummlah',
+                        backgroundColor: this.layoutConfigService.getConfig('colors.state.success'),
+                        data: [
+                            10000000000, 12000000000, 11000000000, 12500000000, 12600000000
+                        ],
+                        fill: false
+                    }
+                ]
+            },
+            options: {
+                title: {
+                    display: false,
+                },
+                tooltips: {
+                    intersect: false,
+                    mode: 'nearest',
+                    xPadding: 10,
+                    yPadding: 10,
+                    caretPadding: 10
+                },
+                legend: {
+                    display: false
+                },
+                responsive: true,
+                maintainAspectRatio: true,
+                scales: {
+                    xAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Bulan'
+                        }
+                    }],
+                    yAxes: [{
+                        display: false,
+                        stacked: false,
+                        gridLines: false,
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+
+        this.piechart = new Chart(this.pieChartRef.nativeElement, {
+            type: 'pie',
+            data: {
+                labels: [
+                    'Sudah Bayar',
+                    'Belum Bayar'
+                ],
+                datasets: [
+                    {
+                        // label: 'Jummlah',
+                        backgroundColor: [
+                            this.layoutConfigService.getConfig('colors.state.success'),
+                            this.layoutConfigService.getConfig('colors.state.danger'),
+                        ],
+                        data: [
+                            82,
+                            28
+                        ]
+                    }
+                ]
+            },
+            options: {
+                title: {
+                    display: false,
+                },
+                tooltips: {
+                    intersect: false,
+                    mode: 'nearest',
+                    xPadding: 10,
+                    yPadding: 10,
+                    caretPadding: 10
+                },
+                legend: {
+                    display: true
+                },
+                responsive: true,
+                maintainAspectRatio: true,
+                scales: {
+                    xAxes: [{
+                        display: false,
+                        scaleLabel: {
+                            display: false,
+                            labelString: ''
+                        }
+                    }],
+                    yAxes: [{
+                        display: false,
+                        stacked: false,
+                        gridLines: false,
+                    }]
+                }
+            }
+        });
     }
 }
