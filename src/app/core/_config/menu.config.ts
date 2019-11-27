@@ -57,7 +57,7 @@ export class MenuConfig {
 							title: 'Form Pengajuan KPR',
 							bullet: 'dot',
 							icon: 'flaticon-web',
-							page: '/pemanfaatan'
+							page: '/applicant'
 						},
 					]
 				},
@@ -114,7 +114,7 @@ export class MenuConfig {
 							title: 'Pencadangan',
 							bullet: 'dot',
 							icon: 'flaticon-web',
-							page: '/informasi'
+							page: '/bppencadangan'
 						},
 					]
 				},
@@ -140,7 +140,7 @@ export class MenuConfig {
 					title: 'Profile',
 					icon: 'flaticon2-list-2',
 					root: true,
-					page: '/dashboardandreport'
+					page: '/profile'
 				},
 				{
 					title: 'Pengajuan',
@@ -150,11 +150,11 @@ export class MenuConfig {
 					submenu: [
 						{
 							title: 'Kalkulator Limit & Informasi terkait KPR',
-							page: '/pengembangan'
+							page: '/kalkulator'
 						},
 						{
 							title: 'Form Pengajuan KPR',
-							page: '/pemanfaatan'
+							page: '/applicant'
 						},
 					]
 				},

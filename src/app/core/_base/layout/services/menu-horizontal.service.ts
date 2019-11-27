@@ -13,6 +13,7 @@ export class MenuHorizontalService {
 	menuListAdmin$: BehaviorSubject<any[]> = new BehaviorSubject<any[]>([]);
 	menuListKemenkeu$: BehaviorSubject<any[]> = new BehaviorSubject<any[]>([]);
 	menuListBpTappera$: BehaviorSubject<any[]> = new BehaviorSubject<any[]>([]);
+	menuListPesertaMandiri$: BehaviorSubject<any[]> = new BehaviorSubject<any[]>([]);
 	
 	/**
 	 * Service constructor
@@ -34,6 +35,9 @@ export class MenuHorizontalService {
 		this.menuListKemenkeu$.next(menuItemsKemenkeu);
 		const menuItemsBptappera: any[] = objectPath.get(this.menuConfigService.getMenus(), 'headerBptappera.items');
 		this.menuListBpTappera$.next(menuItemsBptappera);
+		const menuItemsPesertaMandiri: any[] = objectPath.get(this.menuConfigService.getMenus(), 'headerPesertaMandiri.items');
+        this.menuListPesertaMandiri$.next(menuItemsPesertaMandiri);
+    
 	}
 
 }
