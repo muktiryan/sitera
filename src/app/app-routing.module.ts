@@ -41,6 +41,10 @@ const routes: Routes = [
                 loadChildren: () => import('../app/views/pages/bppengajuan/bppengajuan.module').then(m => m.BppengajuanModule)
             },
             {
+                path: 'bppemanfaatan',
+                loadChildren: () => import('../app/views/pages/bppemanfaatan/bppemanfaatan.module').then(m => m.BppemanfaatanModule)
+            },
+            {
                 path: 'bppengerahan',
                 loadChildren: () => import('../app/views/pages/bppengerahan/bppengerahan.module').then(m => m.BppengerahanModule)
             },

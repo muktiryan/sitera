@@ -102,7 +102,7 @@ export class MenuConfig {
                             title: 'Pemanfaatan',
                             bullet: 'dot',
                             icon: 'flaticon-web',
-                            page: '/informasi'
+                            page: '/bppemanfaatan'
                         },
                         {
                             title: 'Pemupukan',
