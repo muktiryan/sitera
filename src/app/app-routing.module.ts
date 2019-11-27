@@ -65,6 +65,10 @@ const routes: Routes = [
                 loadChildren: () => import('../app/views/pages/bpkepesertaan/bpkepesertaan.module').then(m => m.BpkepesertaanModule)
             },
             {
+                path: 'bpdashboardandreport',
+                loadChildren: () => import('../app/views/pages/bpdashboardreport/bpdashboardreport.module').then(m => m.BpdashboardreportModule)
+            },
+            {
                 path: 'profile',
                 loadChildren: () => import('../app/views/pages/pengajuan/pengajuan.module').then(m => m.PengajuanModule)
             },

@@ -122,7 +122,7 @@ export class MenuConfig {
                     title: 'Dashboard & Report',
                     root: true,
                     alignment: 'left',
-                    page: '/dashboardandreport',
+                    page: '/bpdashboardandreport',
                 },
                 {
                     title: 'FAQ',

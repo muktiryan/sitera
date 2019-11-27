@@ -1,0 +1,70 @@
+<h4 id="section3" class="mg-b-10">Dashboard & Report</h4>
+<hr class="mg-y-10">
+<div class="row mb-3">
+    <div class="col-xl-6">
+        <kt-portlet [class]="'kt-portlet--height-fluid-full kt-portlet--border-bottom-brand'">
+            <kt-portlet-body [class]="'kt-portlet__body--fluid'">
+                <div class="kt-widgettotaljumlahpeserta">
+                    <div class="kt-widgettotaljumlahpeserta__header kt-margin-b-30">
+                        <!-- <h3 class="kt-widget14__title">{{title}}</h3> -->
+                        <h3 class="kt-widgettotaljumlahpeserta__title"><span
+                                style="color: #1dc9b7;">Total Jumlah Peserta</span></h3>
+                    </div>
+                    <div class="kt-widgettotaljumlahpeserta__chart">
+                        <canvas #lineChart1 style="max-width: 100%; max-height: 100%;">{{ linechart1 }}</canvas>
+                    </div>
+                </div>
+            </kt-portlet-body>
+        </kt-portlet>
+    </div>
+    <div class="col-xl-6">
+        <kt-portlet [class]="'kt-portlet--height-fluid-full kt-portlet--border-bottom-brand'">
+            <kt-portlet-body [class]="'kt-portlet__body--fluid'">
+                <div class="kt-nab">
+                    <div class="kt-nab__header kt-margin-b-30">
+                        <!-- <h3 class="kt-widget14__title">{{title}}</h3> -->
+                        <h3 class="kt-nab__title"><span
+                                style="color: #1dc9b7;">NAB</span></h3>
+                    </div>
+                    <div class="kt-nab__chart">
+                        <canvas #lineChart2 style="max-width: 100%; max-height: 100%;">{{ linechart2 }}</canvas>
+                    </div>
+                </div>
+            </kt-portlet-body>
+        </kt-portlet>
+    </div>
+</div>
+<div class="row mb-3">
+    <div class="col-xl-6">
+        <kt-portlet [class]="'kt-portlet--height-fluid-full kt-portlet--border-bottom-brand'">
+            <kt-portlet-body [class]="'kt-portlet__body--fluid'">
+                <div class="kt-widgettotalnilaipemanfaatan">
+                    <div class="kt-widgettotalnilaipemanfaatan__header kt-margin-b-30">
+                        <!-- <h3 class="kt-widget14__title">{{title}}</h3> -->
+                        <h3 class="kt-widgettotalnilaipemanfaatan__title"><span
+                                style="color: #1dc9b7;">Total Nilai Pemanfaatan</span></h3>
+                    </div>
+                    <div class="kt-widgettotalnilaipemanfaatan__chart">
+                        <canvas #barChart1 style="max-width: 100%; max-height: 100%;">{{ barchart1 }}</canvas>
+                    </div>
+                </div>
+            </kt-portlet-body>
+        </kt-portlet>
+    </div>
+    <div class="col-xl-6">
+        <kt-portlet [class]="'kt-portlet--height-fluid-full kt-portlet--border-bottom-brand'">
+            <kt-portlet-body [class]="'kt-portlet__body--fluid'">
+                <div class="kt-totaliuran">
+                    <div class="kt-totaliuran__header kt-margin-b-30">
+                        <!-- <h3 class="kt-widget14__title">{{title}}</h3> -->
+                        <h3 class="kt-totaliuran__title"><span
+                                style="color: #1dc9b7;">Total Iuran</span></h3>
+                    </div>
+                    <div class="kt-totaliuran__chart">
+                        <canvas #barChart2 style="max-width: 100%; max-height: 100%;">{{ barchart2 }}</canvas>
+                    </div>
+                </div>
+            </kt-portlet-body>
+        </kt-portlet>
+    </div>
+</div>
