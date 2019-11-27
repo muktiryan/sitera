@@ -7,6 +7,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class SimulasiComponent implements OnInit {
   loginForm: FormGroup;
+  kalkulator = {};
   tenors = [
     {value: 120, viewValue: '120'},
     {value: 180, viewValue: '180'},

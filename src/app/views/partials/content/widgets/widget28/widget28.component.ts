@@ -7,11 +7,11 @@ import { LayoutConfigService } from '../../../../../core/_base/layout';
  * Sample components with sample data
  */
 @Component({
-	selector: 'kt-widget14',
-	templateUrl: './widget14.component.html',
-	styleUrls: ['./widget14.component.scss'],
+  selector: 'kt-widget28',
+  templateUrl: './widget28.component.html',
+  styleUrls: ['./widget28.component.scss']
 })
-export class Widget14Component implements OnInit {
+export class Widget28Component implements OnInit {
 
 	// Public properties
 	@Input() data: { labels: string[], datasets: any[] };
@@ -41,22 +41,22 @@ export class Widget14Component implements OnInit {
 					{
 						fill: true,
 						// borderWidth: 0,
-						backgroundColor: color(this.layoutConfigService.getConfig('colors.state.danger')).alpha(0.6).rgbString(),
-						borderColor: color(this.layoutConfigService.getConfig('colors.state.danger')).alpha(0).rgbString(),
+						backgroundColor: color(this.layoutConfigService.getConfig('colors.state.success')).alpha(0.6).rgbString(),
+						borderColor: color(this.layoutConfigService.getConfig('colors.state.success')).alpha(0).rgbString(),
 
 						pointHoverRadius: 4,
 						pointHoverBorderWidth: 12,
 						pointBackgroundColor: Chart.helpers.color('#000000').alpha(0).rgbString(),
 						pointBorderColor: Chart.helpers.color('#000000').alpha(0).rgbString(),
-						pointHoverBackgroundColor: this.layoutConfigService.getConfig('colors.state.danger'),
+						pointHoverBackgroundColor: this.layoutConfigService.getConfig('colors.state.success'),
 						pointHoverBorderColor: Chart.helpers.color('#000000').alpha(0.1).rgbString(),
 
 						data: [
-							110000,
-							232000,
-							333000,
-							450000,
-							575000,
+              500000000,
+              510000000,
+              510000000,
+              600000000,
+              500000000
 						]
 					},
 					{
@@ -128,8 +128,8 @@ export class Widget14Component implements OnInit {
 							zeroLineBorderDash: [3, 4]
 						},
 						ticks: {
-							max: 600000,
-							stepSize: 10,
+							max: 700000000,
+							stepSize: 10000,
 							display: true,
 							beginAtZero: true,
 							fontColor: this.layoutConfigService.getConfig('colors.base.shape.3'),
