@@ -90,7 +90,7 @@ export class MenuConfig {
 					title: 'Pengerahan',
 					root: true,
 					alignment: 'left',
-					page: '/bpkepesertaan',
+					page: '/bppengerahan',
 				},
 				{
 					title: 'Pengelolaan',
@@ -124,8 +124,51 @@ export class MenuConfig {
 					alignment: 'left',
 					page: '/dashboardandreport',
 				},
+                {
+                    title: 'FAQ',
+                    root: true,
+                    alignment: 'left',
+                    toggle: 'click',
+                    page: '/faq'
+                },
 			]
 		},
+        headerPesertaMandiri: {
+            self: {},
+            items: [
+                {
+                    title: 'Home',
+                    root: true,
+                    alignment: 'left',
+                    page: '/home',
+                },
+                {
+                    title: 'Profile',
+                    root: true,
+                    alignment: 'left',
+                    page: '/pengajuan',
+                },
+                {
+                    title: 'Pengajuan',
+                    root: true,
+                    alignment: 'left',
+                    page: '/pengajuan',
+                },
+                {
+                    title: 'Dashboard & Report',
+                    root: true,
+                    alignment: 'left',
+                    page: '/dashboardandreport',
+                },
+                {
+                    title: 'FAQ',
+                    root: true,
+                    alignment: 'left',
+                    toggle: 'click',
+                    page: '/faq'
+                },
+            ]
+        },
 		aside: {
 			self: {},
 			items: [

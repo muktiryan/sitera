@@ -40,6 +40,10 @@ const routes: Routes = [
 				path: 'bppengajuan',
 				loadChildren: () => import('../app/views/pages/bppengajuan/bppengajuan.module').then(m => m.BppengajuanModule)
 			},
+            {
+                path: 'bppengerahan',
+                loadChildren: () => import('../app/views/pages/bppengerahan/bppengerahan.module').then(m => m.BppengerahanModule)
+            },
 			{
 				path: 'bpkepesertaan',
 				loadChildren: () => import('../app/views/pages/bpkepesertaan/bpkepesertaan.module').then(m => m.BpkepesertaanModule)
