@@ -3,8 +3,8 @@
 	<kt-portlet-header [sticky]="true" [title]="'List Employees'" [class]="'kt-portlet__head--lg'"
 		[viewLoading$]="dataSource.loading$">
 		<ng-container ktPortletTools>
-			<button (click)="createProduct()" mat-raised-button color="primary"
-				matTooltip="Create new product">Add</button>
+			<!-- <button (click)="createProduct()" mat-raised-button color="primary"
+				matTooltip="Create new product">Add</button> -->
 		</ng-container>
 	</kt-portlet-header>
 	<!-- end::Header -->
@@ -31,7 +31,7 @@
 			<!-- start::GROUP ACTIONS -->
 			<!-- Group actions list: 'Delete selected' | 'Fetch selected' | 'Update status for selected' -->
 			<!-- Group actions are shared for all LISTS | See '../../_shared' folder -->
-			<div class="row align-items-center collapse kt-form__group-actions kt-margin-top-20 kt-margin-bottom-20"
+			<!-- <div class="row align-items-center collapse kt-form__group-actions kt-margin-top-20 kt-margin-bottom-20"
 				[ngClass]="{'show' : selection.selected.length > 0}">
 				<div class="col-xl-12">
 					<div class="kt-form__group kt-form__group--inline">
@@ -45,22 +45,22 @@
 								<mat-icon>delete</mat-icon>
 								Delete All
 							</button>&nbsp;
-							<!-- Call 'delete-entity-dialog' from _shared folder -->
+							
 							<button mat-raised-button (click)="fetchProducts()" matTooltip="Fetch selected products"
 								class="mat-button-mt-4">
 								<mat-icon>clear_all</mat-icon>
 								Fetch Selected Records
 							</button>&nbsp;
-							<!-- Call 'fetch-entity-dialog' from _shared folder -->
+							
 							<button mat-raised-button (click)="updateStatusForProducts()"
 								matTooltip="Update status for selected products" class="mat-button-mt-4">
 								<mat-icon>update</mat-icon>
 								Update status
-							</button><!-- Call 'update-stated-dialog' from _shared folder -->
+							</button>
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<!-- end::GROUP ACTIONS -->
 		</div>
 		<!-- end::FILTERS & GROUP ACTIONS -->
@@ -148,41 +148,6 @@
 				<ng-container matColumnDef="nilaipengembangan">
 					<mat-header-cell *matHeaderCellDef mat-sort-header>Nilai Pengembangan</mat-header-cell>
 					<mat-cell *matCellDef="let product">{{product.price}}</mat-cell>
-				</ng-container>
-
-				<ng-container matColumnDef="actions">
-					<mat-header-cell *matHeaderCellDef>
-						Actions
-					</mat-header-cell>
-					<mat-cell *matCellDef="let product">
-						<!-- <button type="button" (click)="editProduct(product.id)" mat-icon-button color="primary"
-							matTooltip="Edit product">
-							<mat-icon>visibility</mat-icon>
-						</button>&nbsp;
-						<button mat-icon-button color="warn" type="button" (click)="deleteProduct(product)"
-							matTooltip="Delete product">
-							<mat-icon>edit</mat-icon>
-						</button>&nbsp; -->
-						<button type="button" mat-icon-button color="primary" matTooltip="Edit product">
-							<mat-icon>visibility</mat-icon>
-						</button>&nbsp;
-						<button mat-icon-button color="warn" type="button" matTooltip="Delete product">
-							<mat-icon>create</mat-icon>
-						</button>&nbsp;
-						<!-- <button mat-icon-button [matMenuTriggerFor]="menu" matTooltip="More actions">
-							<mat-icon>more_vert</mat-icon>
-						</button>
-						<mat-menu #menu="matMenu">
-							<button mat-menu-item type="button">
-								<mat-icon>subject</mat-icon>
-								<span>Remarks</span>
-							</button>
-							<button mat-menu-item type="button">
-								<mat-icon>assignment</mat-icon>
-								<span>Specifications</span>
-							</button>
-						</mat-menu> -->
-					</mat-cell>
 				</ng-container>
 
 				<mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>

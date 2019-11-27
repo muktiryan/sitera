@@ -9,8 +9,12 @@ import {PartialsModule} from '../partials/partials.module';
 import {CoreModule} from '../../core/core.module';
 import {PengajuanmanfaatComponent} from './pengajuanmanfaat/pengajuanmanfaat.component';
 import {PengajuanredemptionComponent} from './pengajuanredemption/pengajuanredemption.component';
+// import { BppengajuanComponent } from './bppengajuan/bppengajuan.component';
+// import { BpkepesertaanComponent } from './bpkepesertaan/bpkepesertaan.component';
+// import { BppencadanganComponent } from './bppencadangan/bppencadangan.component';
+// import { BppengerahanComponent } from './bppengerahan/bppengerahan.component';
 
-
+// BppengajuanComponent, BpkepesertaanComponent, BppencadanganComponent, BppengerahanComponent
 @NgModule({
     declarations: [PengajuanmanfaatComponent, PengajuanredemptionComponent],
     exports: [],

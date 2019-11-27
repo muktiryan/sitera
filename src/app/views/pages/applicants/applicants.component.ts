@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-applicants',
   templateUrl: './applicants.component.html',
@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ApplicantsComponent implements OnInit {
   masterSelected:boolean;
   sortaction = {up:0,sl:0,in:0,ns:0,bl:0,st:0}
+  applicant = {}
   pageOfItems: Array<any>;
   items = [];
   dataMessage = "There are no job posts available at the moment. Please create a new one."
@@ -68,7 +69,7 @@ export class ApplicantsComponent implements OnInit {
   ];
   
 
-  constructor() { 
+  constructor(private fb: FormBuilder,) { 
     this.masterSelected = false;
   }
 

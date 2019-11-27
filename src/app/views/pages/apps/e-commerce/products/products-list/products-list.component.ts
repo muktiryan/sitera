@@ -41,7 +41,7 @@ import {
 export class ProductsListComponent implements OnInit, OnDestroy {
 	// Table fields
 	dataSource: ProductsDataSource;
-	displayedColumns = ['select', 'manufacture', 'model', 'modelYear', 'color', 'price', 'lamabekerja', 'workunit', 'status', 'potongan', 'nilaipengembangan', 'actions'];
+	displayedColumns = ['select', 'manufacture', 'model', 'modelYear', 'color', 'price', 'lamabekerja', 'workunit', 'status', 'potongan', 'nilaipengembangan'];
 	@ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 	@ViewChild('sort1', { static: true }) sort: MatSort;
 	// Filter fields
