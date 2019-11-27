@@ -16,7 +16,7 @@ export class Widget12Component implements OnInit {
 	// Public properties
 	@Input() data: { labels: string[], datasets: any[] };
 	@Input() type: string = 'line';
-	@ViewChild('chart', {static: true}) chart: ElementRef;
+	@ViewChild('chart', { static: true }) chart: ElementRef;
 
 	/**
 	 * Component constructor
@@ -36,7 +36,7 @@ export class Widget12Component implements OnInit {
 		if (!this.data) {
 			const color = Chart.helpers.color;
 			this.data = {
-				labels: ['1 Jan', '2 Jan', '3 Jan', '4 Jan', '5 Jan', '6 Jan', '7 Jan'],
+				labels: ['Januari', 'Februari', 'Maret', 'April', 'Mei'],
 				datasets: [
 					{
 						fill: true,
@@ -51,7 +51,13 @@ export class Widget12Component implements OnInit {
 						pointHoverBackgroundColor: this.layoutConfigService.getConfig('colors.state.brand'),
 						pointHoverBorderColor: Chart.helpers.color('#000000').alpha(0.1).rgbString(),
 
-						data: [20, 40, 50, 25, 35, 60, 30]
+						data: [
+							100,
+							110,
+							125,
+							150,
+							160,
+						]
 					},
 					{
 						fill: true,
@@ -66,7 +72,7 @@ export class Widget12Component implements OnInit {
 						pointHoverBackgroundColor: this.layoutConfigService.getConfig('colors.state.brand'),
 						pointHoverBorderColor: Chart.helpers.color('#000000').alpha(0.1).rgbString(),
 
-						data: [25, 45, 55, 30, 40, 65, 35]
+						// data: [25, 45, 55, 30, 40, 65, 35]
 					}
 				]
 			};
@@ -122,7 +128,7 @@ export class Widget12Component implements OnInit {
 							zeroLineBorderDash: [3, 4]
 						},
 						ticks: {
-							max: 70,
+							max: 200,
 							stepSize: 10,
 							display: true,
 							beginAtZero: true,
