@@ -6,7 +6,7 @@ import {CommonModule} from '@angular/common';
 import {CoreModule} from '../../../core/core.module';
 import {PartialsModule} from '../../partials/partials.module';
 // import { DashboardComponent } from './dashboard.component';
-import {BppengajuanComponent} from './bppengajuan.component';
+import {BppemupukanComponent} from './bppemupukan.component';
 
 @NgModule({
     imports: [
@@ -16,14 +16,14 @@ import {BppengajuanComponent} from './bppengajuan.component';
         RouterModule.forChild([
             {
                 path: '',
-                component: BppengajuanComponent
+                component: BppemupukanComponent
             },
         ]),
     ],
     providers: [],
     declarations: [
-        BppengajuanComponent,
+        BppemupukanComponent,
     ]
 })
-export class BppengajuanModule {
+export class BppemupukanModule {
 }

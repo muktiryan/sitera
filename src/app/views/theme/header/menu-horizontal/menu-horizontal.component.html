@@ -22,6 +22,11 @@
 				<ng-container *ngIf="item.title" [ngTemplateOutlet]="menuTemplate" [ngTemplateOutletContext]="{ item: item }"></ng-container>
 			</ng-container>
 		</ul>
+		<ul *ngIf="_user.roles[0] == 4" class="kt-menu__nav" [ngClass]="htmlClassService.getClasses('header_menu_nav', true)">
+			<ng-container *ngFor="let item of menuHorService.menuListPesertaMandiri$ | async">
+				<ng-container *ngIf="item.title" [ngTemplateOutlet]="menuTemplate" [ngTemplateOutletContext]="{ item: item }"></ng-container>
+			</ng-container>
+		</ul>
 	</div>
 </div>
 <!-- END: Horizontal Menu -->
