@@ -6,11 +6,11 @@ import {LayoutConfigService} from '../../../../../core/_base/layout';
 import {Chart} from 'chart.js/dist/Chart.min.js';
 
 @Component({
-    selector: 'kt-widget-line-bppengarahan',
-    templateUrl: './widgetlinebppengarahan1.component.html',
-    styleUrls: ['./widgetlinebppengarahan1.component.scss'],
+    selector: 'kt-widgetlinebppengerahan1',
+    templateUrl: './widgetlinebppengerahan1.component.html',
+    styleUrls: ['./widgetlinebppengerahan1.component.scss'],
 })
-export class Widgetlinebppengarahan1Component implements OnInit {
+export class Widgetlinebppengerahan1Component implements OnInit {
     // Public properties
     @Input() title: string;
     @Input() data: { labels: string[]; datasets: any[] };

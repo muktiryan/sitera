@@ -33,11 +33,11 @@ import {PerfectScrollbarModule} from 'ngx-perfect-scrollbar';
 import {CoreModule} from '../../core/core.module';
 // CRUD Partials
 import {
-	ActionNotificationComponent,
-	AlertComponent,
-	DeleteEntityDialogComponent,
-	FetchEntityDialogComponent,
-	UpdateStatusDialogComponent,
+    ActionNotificationComponent,
+        AlertComponent,
+        DeleteEntityDialogComponent,
+        FetchEntityDialogComponent,
+        UpdateStatusDialogComponent,
 } from './content/crud';
 // Layout partials
 import {

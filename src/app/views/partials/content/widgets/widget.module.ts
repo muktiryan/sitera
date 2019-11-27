@@ -19,7 +19,7 @@ import {Widget5Component} from './widget5/widget5.component';
 import {Widget12Component} from './widget12/widget12.component';
 import {Widget14Component} from './widget14/widget14.component';
 import {Widget26Component} from './widget26/widget26.component';
-import {Widgetlinebppengarahan1Component} from './widgetlinebppengarahan1/widgetlinebppengarahan1.component';
+import {Widgetlinebppengerahan1Component} from './widgetlinebppengerahan1/widgetlinebppengerahan1.component';
 import {Timeline2Component} from './timeline2/timeline2.component';
 
 @NgModule({
@@ -32,7 +32,7 @@ import {Timeline2Component} from './timeline2/timeline2.component';
         Widget12Component,
         Widget14Component,
         Widget26Component,
-        Widgetlinebppengarahan1Component,
+        Widgetlinebppengerahan1Component,
         Timeline2Component,
     ],
     exports: [
@@ -44,7 +44,7 @@ import {Timeline2Component} from './timeline2/timeline2.component';
         Widget12Component,
         Widget14Component,
         Widget26Component,
-        Widgetlinebppengarahan1Component,
+        Widgetlinebppengerahan1Component,
         Timeline2Component,
     ],
     imports: [

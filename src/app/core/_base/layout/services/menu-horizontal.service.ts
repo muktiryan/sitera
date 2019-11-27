@@ -33,8 +33,8 @@ export class MenuHorizontalService {
         this.menuListAdmin$.next(menuItemsAdmin);
         const menuItemsKemenkeu: any[] = objectPath.get(this.menuConfigService.getMenus(), 'headerKemenkeu.items');
         this.menuListKemenkeu$.next(menuItemsKemenkeu);
-        // const menuItemsBptappera: any[] = objectPath.get(this.menuConfigService.getMenus(), 'headerBptappera.items');
-        const menuItemsBptappera: any[] = objectPath.get(this.menuConfigService.getMenus(), 'headerBptappera2.items');
+        const menuItemsBptappera: any[] = objectPath.get(this.menuConfigService.getMenus(), 'headerBptappera.items');
+        // const menuItemsBptappera: any[] = objectPath.get(this.menuConfigService.getMenus(), 'headerBptappera2.items');
         this.menuListBpTappera$.next(menuItemsBptappera);
         const menuItemsPesertaMandiri: any[] = objectPath.get(this.menuConfigService.getMenus(), 'headerPesertaMandiri.items');
         this.menuListPesertaMandiri$.next(menuItemsPesertaMandiri);
