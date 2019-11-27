@@ -114,7 +114,7 @@ export class MenuConfig {
                             title: 'Pencadangan',
                             bullet: 'dot',
                             icon: 'flaticon-web',
-                            page: '/informasi'
+                            page: '/bppencadangan'
                         },
                     ]
                 },
