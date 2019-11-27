@@ -1,0 +1,79 @@
+<h4 id="section3" class="mg-b-10">Pencadangan</h4>
+<hr class="mg-y-10">
+<kt-portlet>
+    <kt-portlet-header [title]="'Tanggal 01 November 2019 - 31 November 2019'"
+                       [class]="'kt-portlet__head--lg kt-portlet__head--noborder kt-portlet__head--break-sm'">
+    </kt-portlet-header>
+</kt-portlet>
+<kt-portlet>
+    <kt-portlet-header [title]="'Status Pencadangan'"
+                       [class]="'kt-portlet__head--lg kt-portlet__head--noborder kt-portlet__head--break-sm'">
+    </kt-portlet-header>
+    <kt-portlet-body [class]="'kt-portlet__body--fit'">
+        <div class="kt-widget1">
+            <ng-container *ngFor="let item of data">
+                <ng-container [ngTemplateOutlet]="itemTemplate" [ngTemplateOutletContext]="{item: item}"></ng-container>
+            </ng-container>
+        </div>
+        <ng-template #itemTemplate let-item="item">
+            <div class="kt-widget1__item">
+                <div class="kt-widget1__info">
+                    <h3 class="kt-widget1__title">{{item.title}}</h3>
+                    <span class="kt-widget1__desc">{{item.desc}}</span>
+                </div>
+                <span class="kt-widget1__number" [ngClass]="item.valueClass">{{item.value}}</span>
+            </div>
+        </ng-template>
+    </kt-portlet-body>
+</kt-portlet>
+<kt-portlet [class]="'kt-portlet--height-fluid'">
+    <kt-portlet-header [title]="'Status Redemption'"
+                       [class]="'kt-portlet__head--lg kt-portlet__head--noborder kt-portlet__head--break-sm'">
+    </kt-portlet-header>
+    <kt-portlet-body [class]="'kt-portlet__body--fit'">
+
+        <!-- See off.documentations 'https://material.angular.io/components/table/overview' -->
+        <div perfectScrollbar [ngStyle]="{'max-height': '43vh', 'position': 'relative'}"
+             class="mat-table__wrapper mat-table__wrapper--dashboard mb-4">
+            <!-- Checkbox Column -->
+            <!-- Table with selection -->
+            <!-- https://run.stackblitz.com/api/angular/v1?file=app%2Ftable-selection-example.ts -->
+            <table mat-table class="lmat-elevation-z8" [dataSource]="dataSourceRedemption" matSort matSortActive="id"
+                   matSortDirection="asc" matSortDisableClear>
+                <ng-container matColumnDef="bulan">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>Bulan</th>
+                    <!-- <td mat-cell *matCellDef="let product" class="mat-column-vinCode">{{product.id}}</td> -->
+                    <td mat-cell *matCellDef="let product">{{product.bulan}}</td>
+                </ng-container>
+
+                <ng-container matColumnDef="total_peserta">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>Total Peserta Redeem</th>
+                    <td mat-cell *matCellDef="let product">{{product.total_peserta}}</td>
+                </ng-container>
+
+                <ng-container matColumnDef="total_redemption">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>Total Redemption</th>
+                    <td mat-cell *matCellDef="let product">{{product.total_redemption | currency:'Rp.'}}</td>
+                </ng-container>
+
+                <ng-container matColumnDef="total_dibayarkan">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>Total Dibayarkan</th>
+                    <td mat-cell *matCellDef="let product">{{product.total_dibayarkan | currency:'Rp.'}}</td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+            </table>
+
+            <div class="mat-table__message" *ngIf="!dataSource.hasItems">No records found</div>
+        </div>
+        <!-- start: BOTTOM -->
+        <div class="mat-table__bottom mat-table__bottom--padding">
+            <!--<mat-spinner [diameter]="20" *ngIf="dataSource.loading$ | async"></mat-spinner>-->
+            <mat-paginator [pageSize]="6" [pageSizeOptions]="[3, 6, 15]" [length]="dataSource.paginatorTotal$ | async"
+                           [showFirstLastButtons]="true"></mat-paginator>
+        </div>
+        <!-- end: BOTTOM -->
+
+    </kt-portlet-body>
+</kt-portlet>
