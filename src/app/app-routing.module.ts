@@ -37,6 +37,10 @@ const routes: Routes = [
                 loadChildren: () => import('../app/views/pages/pemanfaatan/pemanfaatan.module').then(m => m.PemanfaatanModule)
             },
             {
+                path: 'bphome',
+                loadChildren: () => import('../app/views/pages/bphome/bphome.module').then(m => m.BphomeModule)
+            },
+            {
                 path: 'bppengajuan',
                 loadChildren: () => import('../app/views/pages/bppengajuan/bppengajuan.module').then(m => m.BppengajuanModule)
             },
@@ -51,6 +55,10 @@ const routes: Routes = [
             {
                 path: 'bppencadangan',
                 loadChildren: () => import('../app/views/pages/bppencadangan/bppencadangan.module').then(m => m.BppencadanganModule)
+            },
+            {
+                path: 'bppemupukan',
+                loadChildren: () => import('../app/views/pages/bppemupukan/bppemupukan.module').then(m => m.BppemupukanModule)
             },
             {
                 path: 'bpkepesertaan',

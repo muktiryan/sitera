@@ -84,7 +84,7 @@ export class MenuConfig {
                     title: 'Beranda',
                     root: true,
                     alignment: 'left',
-                    page: '/home',
+                    page: '/bphome',
                 },
                 {
                     title: 'Pengerahan',
@@ -108,7 +108,7 @@ export class MenuConfig {
                             title: 'Pemupukan',
                             bullet: 'dot',
                             icon: 'flaticon-web',
-                            page: '/simulasi'
+                            page: '/bppemupukan'
                         },
                         {
                             title: 'Pencadangan',
